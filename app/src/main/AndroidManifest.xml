@@ -13,6 +13,12 @@
         android:theme="@style/Theme.SumApp"
         tools:targetApi="31">
         <activity
+            android:name=".week2.SecondWeekActivity"
+            android:exported="false" />
+        <activity
+            android:name=".week2.ListActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

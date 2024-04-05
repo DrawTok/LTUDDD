@@ -2,10 +2,13 @@ package com.example.sumapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.example.sumapp.week2.SecondWeekActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,9 +23,15 @@ public class MainActivity extends AppCompatActivity {
         viewToId();
 
         btnCalc.setOnClickListener(v->{
-            int sum = Integer.parseInt(edtNum1.getText().toString())
-                    + Integer.parseInt(edtNum2.getText().toString());
-            tvSum.setText(String.valueOf(sum));
+            int num1 = Integer.parseInt(edtNum1.getText().toString());
+            int num2 = Integer.parseInt(edtNum2.getText().toString());
+            int sum = num1 + num2;
+
+            Intent intent = new Intent(this, SecondWeekActivity.class);
+            intent.putExtra("num1", num1);
+            intent.putExtra("num2", num2);
+            intent.putExtra("sum", sum);
+            startActivity(intent);
         });
 
     }
