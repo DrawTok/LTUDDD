@@ -18,8 +18,12 @@
         <activity
             android:name=".week2.ListActivity"
             android:exported="false" />
+
         <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".week3.ListActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
