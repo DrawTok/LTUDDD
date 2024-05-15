@@ -36,7 +36,7 @@ public class Week5Activity extends AppCompatActivity {
                 .observeOn(AndroidSchedulers.mainThread()).subscribe(
                     data ->{
                         users = data;
-                        adapter = new UserAdapter(users);
+                        adapter = new UserAdapter(users, getApplicationContext());
                         recyclerView.setAdapter(adapter);
                         recyclerView.setHasFixedSize(true);
                         recyclerView.setLayoutManager(new LinearLayoutManager(this));
